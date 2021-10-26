@@ -1,6 +1,5 @@
 .bd-navbar {
-  background-color: #163a25;
-}
+  background-color: #163a25;}
 
 .btn {
   text-align: start;
@@ -10,3 +9,19 @@
 .highlight {
   background: #eef1ee;
 }
+
+.pic img {
+  width: 100%;
+  height: auto;
+}
+.pic blockquote {
+  color: white;
+  font-size: 32px;
+  background-image: url("foto3.jpg") ;
+  background-size: cover;
+  display: block;
+  height: 400px;
+  padding-left: 20px;
+}
+
+      
