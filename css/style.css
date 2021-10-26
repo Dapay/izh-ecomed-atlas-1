@@ -15,9 +15,9 @@
   height: auto;
 }
 .pic blockquote {
-  color: white;
+  color: grey;
   font-size: 32px;
-  background-image: url("../foto4.jpg") ;
+  background-image: url("foto4.jpg") ;
   background-size: cover;
   display: block;
   height: 400px;
