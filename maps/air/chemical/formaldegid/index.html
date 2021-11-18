@@ -109,12 +109,12 @@
                                 Атмосферный воздух
                             </button>
     
-                            <div class="collapse" id="getting-started-collapse">
-                                <ul class="list-unstyled fw-normal pb-1 small">
-    
-                                    <li>
-                                        <a class="d-inline-flex align-items-center rounded" href="../../about_air.html"
-                                          aria-current="page">
+                            <div class="collapse show" id="getting-started-collapse">
+                              <ul class="list-unstyled fw-normal pb-1 small">
+  
+                                  <li>
+                                      <a class="d-inline-flex align-items-center rounded" href="../../../air/about_air.html"
+                                        aria-current="page">
                                           Описание
                                         </a>
                                       </li>
@@ -269,12 +269,12 @@
                                           Концентрация прочих металлов в снежном покрове
                                         </a>
                                       </li>
-                        
+                        <!--
                                       <li>
                                         <a class="d-inline-flex align-items-center rounded" href="../../../deposit/soil_sum/index.html">
                                           Загрязнение почвы
                                         </a>
-                                      </li>
+                                      </li>-->
                         
                                       <li>
                                         <a class="d-inline-flex align-items-center rounded" href="../../../deposit/soil_hm/index.html">
@@ -294,7 +294,7 @@
                                     Растительный покров
                                   </button>
                         
-                                  <div class="collapse show" id="forms-collapse">
+                                  <div class="collapse " id="forms-collapse">
                                     <ul class="list-unstyled fw-normal pb-1 small">
                         
                                       <li>
@@ -468,11 +468,11 @@
                                         </a>
                                       </li>
                         
-                                      <li>
+                                      <!--<li>
                                         <a class="d-inline-flex align-items-center rounded" href="../../../ecol_situation/transport/index.html">
                                           Интенсивность транспортных потоков
                                         </a>
-                                      </li>
+                                      </li>-->
     
                                 </ul>
                             </div>
@@ -826,6 +826,8 @@
         });
         bounds_group.addLayer(layer_45_5);
         map.addLayer(layer_45_5);
+        var baseMaps = {};
+        L.control.layers(baseMaps,{'<img src="legend/45_5.png" /> формальд 4,5 ПДК': layer_45_5,'<img src="legend/35_4.png" /> формальд 3,5 ПДК': layer_35_4,'<img src="legend/25_3.png" /> формальд 2,5 ПДК': layer_25_3,'<img src="legend/15_2.png" /> формальд 1,5 ПДК': layer_15_2,'<img src="legend/05_1.png" /> формальд 0,5 ПДК': layer_05_1,"OSM Standard": layer_OSMStandard_0,},{collapsed:false}).addTo(map);
         setBounds();
         </script>
     </body>
