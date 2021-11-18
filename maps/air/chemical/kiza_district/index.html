@@ -110,12 +110,12 @@
                             Атмосферный воздух
                         </button>
 
-                        <div class="collapse" id="getting-started-collapse">
-                            <ul class="list-unstyled fw-normal pb-1 small">
+                        <div class="collapse show" id="getting-started-collapse">
+                          <ul class="list-unstyled fw-normal pb-1 small">
 
-                                <li>
-                                    <a class="d-inline-flex align-items-center rounded" href="../../air/about_air.html"
-                                      aria-current="page">
+                              <li>
+                                  <a class="d-inline-flex align-items-center rounded" href="../../../air/about_air.html"
+                                    aria-current="page">
                                       Описание
                                     </a>
                                   </li>
@@ -271,11 +271,11 @@
                                     </a>
                                   </li>
                     
-                                  <li>
+                                  <!--<li>
                                     <a class="d-inline-flex align-items-center rounded" href="../../../deposit/soil_sum/index.html">
                                       Загрязнение почвы
                                     </a>
-                                  </li>
+                                  </li>-->
                     
                                   <li>
                                     <a class="d-inline-flex align-items-center rounded" href="../../../deposit/soil_hm/index.html">
@@ -295,7 +295,7 @@
                                 Растительный покров
                               </button>
                     
-                              <div class="collapse show" id="forms-collapse">
+                              <div class="collapse" id="forms-collapse">
                                 <ul class="list-unstyled fw-normal pb-1 small">
                     
                                   <li>
@@ -469,11 +469,11 @@
                                     </a>
                                   </li>
                     
-                                  <li>
+                                  <!--<li>
                                     <a class="d-inline-flex align-items-center rounded" href="../../../ecol_situation/transport/index.html">
                                       Интенсивность транспортных потоков
                                     </a>
-                                  </li>
+                                  </li>-->
 
                             </ul>
                         </div>
@@ -825,7 +825,7 @@
         bounds_group.addLayer(layer_1_5);
         map.addLayer(layer_1_5);
         var baseMaps = {};
-        L.control.layers(baseMaps,{'<img src="legend/1_5.png" /> киза р1': layer_1_5,'<img src="legend/15_4.png" /> киза р1,5': layer_15_4,'<img src="legend/23_3.png" /> киза р2,3': layer_23_3,'<img src="legend/28_2.png" /> киза р2,8': layer_28_2,'<img src="legend/33_1.png" /> киза р3,3': layer_33_1,"OSM Standard": layer_OSMStandard_0,},{collapsed:false}).addTo(map);
+        L.control.layers(baseMaps,{'<img src="legend/1_5.png" /> киза 1': layer_1_5,'<img src="legend/15_4.png" /> киза 1,5': layer_15_4,'<img src="legend/23_3.png" /> киза 2,3': layer_23_3,'<img src="legend/28_2.png" /> киза 2,8': layer_28_2,'<img src="legend/33_1.png" /> киза 3,3': layer_33_1,"OSM Standard": layer_OSMStandard_0,},{collapsed:false}).addTo(map);
         setBounds();
         </script>
     </body>
