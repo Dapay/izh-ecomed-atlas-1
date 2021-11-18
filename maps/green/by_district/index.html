@@ -17,7 +17,7 @@
     <style>
         #map {
             width: 100%;
-            height: 600px;
+            height: 800px;
         }
     </style>
 </head>
@@ -271,11 +271,11 @@
                                         </a>
                                       </li>
                         
-                                      <li>
+                                      <!--<li>
                                         <a class="d-inline-flex align-items-center rounded" href="../../deposit/soil_sum/index.html">
                                           Загрязнение почвы
                                         </a>
-                                      </li>
+                                      </li>-->
                         
                                       <li>
                                         <a class="d-inline-flex align-items-center rounded" href="../../deposit/soil_hm/index.html">
@@ -468,11 +468,11 @@
                                           </a>
                                         </li>
                           
-                                        <li>
+                                        <!--<li>
                                           <a class="d-inline-flex align-items-center rounded" href="../../ecol_situation/transport/index.html">
                                             Интенсивность транспортных потоков
                                           </a>
-                                        </li>
+                                        </li>-->
       
                                   </ul>
     
@@ -771,7 +771,7 @@
         bounds_group.addLayer(layer_80_4);
         map.addLayer(layer_80_4);
         var baseMaps = {};
-        L.control.layers(baseMaps,{'<img src="legend/80_4.png" /> озел 80': layer_80_4,'<img src="legend/50_3.png" /> озел 50': layer_50_3,'<img src="legend/10_2.png" /> озел 10': layer_10_2,'<img src="legend/30_1.png" /> озел 30': layer_30_1,"OSM Standard": layer_OSMStandard_0,},{collapsed:false}).addTo(map);
+        L.control.layers(baseMaps,{'<img src="legend/80_4.png" /> озел 80 %': layer_80_4,'<img src="legend/50_3.png" /> озел 50 %': layer_50_3,'<img src="legend/10_2.png" /> озел 10 %': layer_10_2,'<img src="legend/30_1.png" /> озел 30 %': layer_30_1,"OSM Standard": layer_OSMStandard_0,},{collapsed:false}).addTo(map);
         setBounds();
         </script>
     </body>
