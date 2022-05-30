@@ -13,15 +13,14 @@
         integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <link rel="stylesheet" href="../../../css/bootstrap.css">
     <link rel="stylesheet" href="../../../css/style.css">
-
     <link rel="stylesheet" href="./css/leaflet.css">
     <link rel="stylesheet" href="./css/qgis2web.css">
     <link rel="stylesheet" href="./css/fontawesome-all.min.css">
 
     <style>
         #map {
-            width: 600px;
-            height: 600px;
+            width: 100%;
+            height: 800px;
         }
     </style>
 
@@ -36,6 +35,28 @@
                 <img src="../../../img/izhevsk-logo.png" alt="Медико-экологический атлас Ижевска" width="40"
                     height="32">
             </a>
+
+        <button class="btn bd-sidebar-toggle d-md-none py-0 px-1 ms-3 collapsed" type="button" data-bs-toggle="collapse"
+        data-bs-target="#bd-maps-nav" aria-controls="bd-maps-nav" aria-expanded="false"
+        aria-label="Toggle maps navigation">
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi bi-expand" fill="currentColor"
+          viewBox="0 0 16 16">
+          <title>Expand</title>
+          <path fill-rule="evenodd"
+            d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8zM7.646.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 1.707V5.5a.5.5 0 0 1-1 0V1.707L6.354 2.854a.5.5 0 1 1-.708-.708l2-2zM8 10a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 14.293V10.5A.5.5 0 0 1 8 10z">
+          </path>
+        </svg>
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi bi-collapse" fill="currentColor"
+          viewBox="0 0 16 16">
+          <title>Collapse</title>
+          <path fill-rule="evenodd"
+            d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8zm7-8a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 1 1 .708-.708L7.5 4.293V.5A.5.5 0 0 1 8 0zm-.5 11.707l-1.146 1.147a.5.5 0 0 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 11.707V15.5a.5.5 0 0 1-1 0v-3.793z">
+          </path>
+        </svg>
+
+        </button>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bdNavbar"
                 aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -83,7 +104,7 @@
 
                     <li>
                         <a class="d-inline-flex align-items-center rounded active" aria-current="page"
-                            href="./about.html">
+                            href="../../about_maps.html">
                             О картах
                         </a>
                     </li>
@@ -99,250 +120,366 @@
                             <ul class="list-unstyled fw-normal pb-1 small">
 
                                 <li>
-                                    <a class="d-inline-flex align-items-center rounded" href="#" aria-current="page">
-                                        Описание
+                                    <a class="d-inline-flex align-items-center rounded" href="../../air/about_air.html"
+                                      aria-current="page">
+                                      Описание
                                     </a>
-                                </li>
-
-                                <li>
-                                    <a class="d-inline-flex align-items-center rounded" href="#" aria-current="page">
-                                        Физическое загрязнение
+                                  </li>
+                  
+                                  <li>
+                                    <a class="d-inline-flex align-items-center rounded"
+                                      href="../../air/chemical/co2/index.html" aria-current="page">
+                                      Концентрация CO2 в долях ПДК
                                     </a>
-                                </li>
+                                  </li>
+                  
+                                  <li>
+                                    <a class="d-inline-flex align-items-center rounded" href="../../air/chemical/kiza_district/index.html"
+                                      aria-current="page">
+                                      Значения КИЗА по микрорайонам
+                                    </a>
+                                  </li>
+                  
+                                  <li>
+                                    <a class="d-inline-flex align-items-center rounded"
+                                      href="../../air/chemical/kiza_kadastr/index.html" aria-current="page">
+                                      Значения КИЗА по кадастровому делению
+                                        </a>
+                                      </li>
+                      
+                                      <li>
+                                        <a class="d-inline-flex align-items-center rounded" href="../../air/chemical/kiza_2018/index.html"
+                                          aria-current="page">
+                                          Значения КИЗА (2018)
+                                        </a>
+                                      </li>
+                      
+                                      <li>
+                                        <a class="d-inline-flex align-items-center rounded" href="../../air/chemical/iza_2000/index.html"
+                                          aria-current="page">
+                                          Значения ИЗА (2000)
+                                        </a>
+                                      </li>
+                      
+                                      <li>
+                                        <a class="d-inline-flex align-items-center rounded" href="../../air/chemical/iza_nmu/index.html"
+                                          aria-current="page">
+                                          Значения ИЗА (при НМУ)
+                                        </a>
+                                      </li>
+                      
+                                      <li>
+                                        <a class="d-inline-flex align-items-center rounded" href="../../air/chemical/formaldegid/index.html"
+                                          aria-current="page">
+                                          Формальдегид в долях ПДК
+                                        </a>
+                                      </li>
+                      
+                                      <li>
+                                        <a class="d-inline-flex align-items-center rounded" href="../../air/chemical/stat_emission_AS/index.html"
+                                          aria-current="page">
+                                          Структура выбросов по агрегатному состоянию
+                                        </a>
+                                      </li>
+                      
+                                      <li>
+                                        <a class="d-inline-flex align-items-center rounded" href="../../air/chemical/stat_emission_HC/index.html"
+                                          aria-current="page">
+                                          Структура выбросов по классу опасности
+                                        </a>
+                                      </li>
 
-                                <li>
+                                      <li>
+                                        <a class="d-inline-flex align-items-center rounded" href="../../air/chemical/dinamic_no2/index.html"
+                                          aria-current="page">
+                                          Динамика концентрации NO2
+                                        </a>
+                                      </li>
+                      
+                                      <li>
+                                        <a class="d-inline-flex align-items-center rounded" href="../../air/phisical/dinamic_nois/index.html"
+                                          aria-current="page">
+                                      Динамика уровня шума
+                                    </a>
+                                  </li>
+                  
+                                  <li>
+                                    <a class="d-inline-flex align-items-center rounded" href="../../air/phisical/noise/index.html"
+                                      aria-current="page">
+                                      Уровень эквивалентного шума
+                                    </a>
+                                  </li>
+                  
+                                  <li>
+                                    <a class="d-inline-flex align-items-center rounded" href="../../air/phisical/road_noise/index.html"
+                                      aria-current="page">
+                                      Уровень шума автодорог
+                                    </a>
+                                  </li>
+                  
+                                </ul>
+                              </div>
+                  
+                            </li>
+                    
+                            <li class="mb-1">
+                    
+                              <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse"
+                                data-bs-target="#customize-collapse" aria-expanded="false">
+                                Водная среда
+                              </button>
+                    
+                              <div class="collapse" id="customize-collapse">
+                                <ul class="list-unstyled fw-normal pb-1 small">
+                    
+                                  <li>
+                                    <a class="d-inline-flex align-items-center rounded" href="../water/about_water.html">
+                                      Описание
+                                    </a>
+                                  </li>
+                    
+                                  <li>
+                                    <a class="d-inline-flex align-items-center rounded" href="../../water/spring/index.html">
+                                      Схема родников
+                                    </a>
+                                  </li>
+                    
+                                </ul>
+                              </div>
+                    
+                            </li>
+                    
+                            <li class="mb-1">
+                    
+                              <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse"
+                                data-bs-target="#layout-collapse" aria-expanded="false">
+                                Депонирующие среды
+                              </button>
+                    
+                              <div class="collapse" id="layout-collapse">
+                                <ul class="list-unstyled fw-normal pb-1 small">
+                    
+                                  <li>
+                                    <a class="d-inline-flex align-items-center rounded" href="../deposit/about_deposit.html">
+                                      Описание
+                                    </a>
+                                  </li>
+                    
+                                  <li>
+                                    <a class="d-inline-flex align-items-center rounded" href="../../deposit/snow_iron/index.html">
+                                      Концентрация железа в снежном покрове
+                                    </a>
+                                  </li>
+                    
+                                  <li>
+                                    <a class="d-inline-flex align-items-center rounded" href="../../deposit/snow_metals/index.html">
+                                      Концентрация прочих металлов в снежном покрове
+                                    </a>
+                                  </li>
+                    
+                                  <!--<li>
+                                    <a class="d-inline-flex align-items-center rounded" href="../../deposit/soil_sum/index.html">
+                                      Загрязнение почвы
+                                    </a>
+                                  </li>-->
+                    
+                                  <li>
+                                    <a class="d-inline-flex align-items-center rounded" href="../../deposit/soil_hm/index.html">
+                                      Загрязнение почвы тяжелыми металлами
+                                    </a>
+                                  </li>
+                    
+                                </ul>
+                              </div>
+                    
+                            </li>
+                    
+                            <li class="mb-1">
+                    
+                              <button class="btn d-inline-flex align-items-center rounded" data-bs-toggle="collapse"
+                                data-bs-target="#forms-collapse" aria-expanded="true">
+                                Растительный покров
+                              </button>
+                    
+                              <div class="collapse show" id="forms-collapse">
+                                <ul class="list-unstyled fw-normal pb-1 small">
+                    
+                                  <li>
+                                    <a class="d-inline-flex align-items-center rounded " href="../about_green.html">
+                                      Описание
+                                    </a>
+                                  </li>
+                    
+                                  <li>
+                                    <a class="d-inline-flex align-items-center rounded" href="../by_district/index.html">
+                                      Озеленение территории по районам
+                                    </a>
+                                  </li>
+                    
+                                  <li>
+                                    <a class="d-inline-flex align-items-center rounded" href="../by_kadastr/index.html">
+                                      Озеленение территории по кадастровому делению
+                                    </a>
+                                  </li>
+                    
+                                  <li>
+                                    <a class="d-inline-flex align-items-center rounded" href="../coverage_area/index.html">
+                                      Покрытие насаждениями
+                                    </a>
+                                  </li>
+                    
+                                </ul>
+                              </div>
+                    
+                            </li>
+                    
+                            <li class="mb-1">
+                    
+                              <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse"
+                                data-bs-target="#content-collapse" aria-expanded="false">
+                                Детская заболеваемость
+                              </button>
+                    
+                              <div class="collapse" id="content-collapse">
+                                <ul class="list-unstyled fw-normal pb-1 small">
+                    
+                                  <li>
+                                    <a class="d-inline-flex align-items-center rounded" href="../../det_zabolev/about_det_zabolev.html">
+                                      Описание
+                                    </a>
+                                  </li>
+                                  
+                                  <li>
+                                    <a class="d-inline-flex align-items-center rounded" href="../../det_zabolev/allerg/index.html">
+                                      Аллергия
+                                    </a>
+                                  </li>
+                  
+                                  <li>
+                                    <a class="d-inline-flex align-items-center rounded" href="../../det_zabolev/astma/index.html">
+                                      Астма
+                                    </a>
+                                  </li>
+                  
+                                  <li>
+                                    <a class="d-inline-flex align-items-center rounded" href="../../det_zabolev/rinit/index.html">
+                                      Ринит
+                                    </a>
+                                  </li>
+                  
+                                  <li>
+                                    <a class="d-inline-flex align-items-center rounded" href="../../det_zabolev/derm/index.html">
+                                      Дерматит
+                                    </a>
+                                  </li>
+                  
+                                  <li>
+                                    <a class="d-inline-flex align-items-center rounded" href="../../det_zabolev/org_dyhan_18/index.html">
+                                      Болезни органов дыхания
+                                    </a>
+                                  </li>
+                  
+                                  <!--<li>
                                     <a class="d-inline-flex align-items-center rounded" href="#">
-                                        Химическое загрязнение
+                                      Заболеваемость по педиатрическим участками
                                     </a>
-                                </li>
-
-                            </ul>
-                        </div>
-
-                    </li>
-
-                    <li class="mb-1">
-
-                        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse"
-                            data-bs-target="#customize-collapse" aria-expanded="false">
-                            Водная среда
-                        </button>
-
-                        <div class="collapse" id="customize-collapse">
-                            <ul class="list-unstyled fw-normal pb-1 small">
-
-                                <li>
+                                  </li>-->
+                  
+                                  <li>
+                                    <a class="d-inline-flex align-items-center rounded" href="../../det_zabolev/obsch_zabolev_17-18/index.html">
+                                      Общая заболеваемость
+                                    </a>
+                                  </li>
+                    
+                                </ul>
+                              </div>
+                    
+                            </li>
+                    
+                            <li class="mb-1">
+                    
+                              <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse"
+                                data-bs-target="#components-collapse" aria-expanded="false">
+                                Риски детскому здоровью
+                              </button>
+                    
+                              <div class="collapse" id="components-collapse">
+                                <ul class="list-unstyled fw-normal pb-1 small">
+                    
+                                  <li>
+                                    <a class="d-inline-flex align-items-center rounded" href="../../riski/about_riski.html">
+                                      Описание
+                                    </a>
+                                  </li>
+                    
+                                  <li>
+                                    <a class="d-inline-flex align-items-center rounded" href="../../riski/detco2/index.html">
+                                      По концентрации оксида углерода
+                                    </a>
+                                  </li>
+                    
+                                  <li>
+                                    <a class="d-inline-flex align-items-center rounded" href="../../riski/detno2/index.html">
+                                      По концентрации диоксида азота
+                                    </a>
+                                  </li>
+                    
+                                  <li>
+                                    <a class="d-inline-flex align-items-center rounded" href="../../riski/detCN2O/index.html">
+                                      По концентрации формальдегида
+                                    </a>
+                                  </li>
+                    
+                                  <!--<li>
                                     <a class="d-inline-flex align-items-center rounded" href="#">
-                                        Описание
+                                      Суммарный индекс риска
                                     </a>
-                                </li>
-
-                                <li>
-                                    <a class="d-inline-flex align-items-center rounded" href="#">
-                                        Схема родников
+                                  </li>-->
+                    
+                                </ul>
+                              </div>
+                    
+                            </li>
+                    
+                            <li class="mb-1">
+                    
+                              <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse"
+                                data-bs-target="#helpers-collapse" aria-expanded="false">
+                                Экологическая обстановка в г.Ижевске
+                              </button>
+                    
+                              <div class="collapse" id="helpers-collapse">
+                                <ul class="list-unstyled fw-normal pb-1 small">
+                    
+                                  <li>
+                                    <a class="d-inline-flex align-items-center rounded" href="../../ecol_situation/about_situation.html">
+                                      Описание
                                     </a>
-                                </li>
-
-                            </ul>
-                        </div>
-
-                    </li>
-
-                    <li class="mb-1">
-
-                        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse"
-                            data-bs-target="#layout-collapse" aria-expanded="false">
-                            Депонирующие среды
-                        </button>
-
-                        <div class="collapse" id="layout-collapse">
-                            <ul class="list-unstyled fw-normal pb-1 small">
-
-                                <li>
-                                    <a class="d-inline-flex align-items-center rounded" href="#">
-                                        Описание
+                                  </li>
+                  
+                                  <li>
+                                    <a class="d-inline-flex align-items-center rounded" href="../../ecol_situation/span1990/index.html">
+                                      Антропогенная нагрузка 1990
                                     </a>
-                                </li>
-
-                                <li>
-                                    <a class="d-inline-flex align-items-center rounded" href="#">
-                                        Концентрация железа в снежном покрове
+                                  </li>
+                  
+                                  <li>
+                                    <a class="d-inline-flex align-items-center rounded" href="../../ecol_situation/span2000/index.html">
+                                      Антропогенная нагрузка 2000
                                     </a>
-                                </li>
-
-                                <li>
-                                    <a class="d-inline-flex align-items-center rounded" href="#">
-                                        Концентрация прочих металлов в снежном покрове
+                                  </li>
+                  
+                                  <li>
+                                    <a class="d-inline-flex align-items-center rounded" href="../../ecol_situation/IB_MEB/index.html">
+                                      Медико-экологическое благополучие
                                     </a>
-                                </li>
-
-                                <li>
-                                    <a class="d-inline-flex align-items-center rounded" href="#">
-                                        Загрязнение почвы
+                                  </li>
+                    
+                                  <!--<li>
+                                    <a class="d-inline-flex align-items-center rounded" href="../../ecol_situation/transport/index.html">
+                                      Интенсивность транспортных потоков
                                     </a>
-                                </li>
-
-                                <li>
-                                    <a class="d-inline-flex align-items-center rounded" href="#">
-                                        Загрязнение почвы тяжелыми металлами
-                                    </a>
-                                </li>
-
-                            </ul>
-                        </div>
-
-                    </li>
-
-                    <li class="mb-1">
-
-                        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse"
-                            data-bs-target="#forms-collapse" aria-expanded="false">
-                            Растительный покров
-                        </button>
-
-                        <div class="collapse" id="forms-collapse">
-                            <ul class="list-unstyled fw-normal pb-1 small">
-
-                                <li>
-                                    <a class="d-inline-flex align-items-center rounded" href="#">
-                                        Описание
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a class="d-inline-flex align-items-center rounded" href="#">
-                                        Озеленение территории
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a class="d-inline-flex align-items-center rounded" href="#">
-                                        Покрытие насаждениями
-                                    </a>
-                                </li>
-
-                            </ul>
-                        </div>
-
-                    </li>
-
-                    <li class="mb-1">
-
-                        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse"
-                            data-bs-target="#content-collapse" aria-expanded="false">
-                            Детская заболеваемость
-                        </button>
-
-                        <div class="collapse" id="content-collapse">
-                            <ul class="list-unstyled fw-normal pb-1 small">
-
-                                <li>
-                                    <a class="d-inline-flex align-items-center rounded" href="#">
-                                        Описание
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a class="d-inline-flex align-items-center rounded" href="#">
-                                        Болезни органов дыхания
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a class="d-inline-flex align-items-center rounded" href="#">
-                                        Заболеваемость по педиатрическим участками
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a class="d-inline-flex align-items-center rounded" href="#">
-                                        Общая заболеваемость
-                                    </a>
-                                </li>
-
-                            </ul>
-                        </div>
-
-                    </li>
-
-                    <li class="mb-1">
-
-                        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse"
-                            data-bs-target="#components-collapse" aria-expanded="false">
-                            Риски детскому здоровью
-                        </button>
-
-                        <div class="collapse" id="components-collapse">
-                            <ul class="list-unstyled fw-normal pb-1 small">
-
-                                <li>
-                                    <a class="d-inline-flex align-items-center rounded" href="#">
-                                        Описание
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a class="d-inline-flex align-items-center rounded" href="#">
-                                        По концентрации оксида углерода
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a class="d-inline-flex align-items-center rounded" href="#">
-                                        По концентрации диоксида азота
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a class="d-inline-flex align-items-center rounded" href="#">
-                                        По концентрации формальдегида
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a class="d-inline-flex align-items-center rounded" href="#">
-                                        Суммарный индекс риска
-                                    </a>
-                                </li>
-
-                            </ul>
-                        </div>
-
-                    </li>
-
-                    <li class="mb-1">
-
-                        <button class="btn d-inline-flex align-items-center rounded collapsed" data-bs-toggle="collapse"
-                            data-bs-target="#helpers-collapse" aria-expanded="false">
-                            Экологическая обстановка в г.Ижевске
-                        </button>
-
-                        <div class="collapse" id="helpers-collapse">
-                            <ul class="list-unstyled fw-normal pb-1 small">
-
-                                <li>
-                                    <a class="d-inline-flex align-items-center rounded" href="#">
-                                        Описание
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a class="d-inline-flex align-items-center rounded" href="#">
-                                        Антропогенная нагрузка
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a class="d-inline-flex align-items-center rounded" href="#">
-                                        Медико-экологическое благополучие
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a class="d-inline-flex align-items-center rounded" href="#">
-                                        Интенсивность транспортных потоков
-                                    </a>
-                                </li>
+                                  </li>-->
 
                             </ul>
                         </div>

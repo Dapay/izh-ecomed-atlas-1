@@ -14,13 +14,12 @@
   <link rel="stylesheet" href="./css/bootstrap.css">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./popup-form/style.css">
-  
-  <link rel="shortcut icon" href="favicon.png" type="image/png">
   <link rel="stylesheet" type="text/css" media="all" href="./popup-form/fancybox/jquery.fancybox.css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
-  <script src="./popup-form/js/jquery-1.7.1.min.js"></script>
-  <script src="./popup-form/fancybox/jquery.fancybox.js"></script>
-  <script src="./popup-form/js/jquery.maskedinput.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+<script src="./popup-form/js/jquery-1.7.1.min.js"></script>
+<script src="./popup-form/fancybox/jquery.fancybox.js"></script>
+<script src="./popup-form/js/jquery.maskedinput.js"></script>
+
 </head>
 
 <body>
@@ -92,7 +91,7 @@
           Технические редакторы:
         </h4>
         <p>
-          Бортникова М.И., Семакина А.В.
+          Бортникова М.И., Данилов П.Я., Семакина А.В. тел. 8(3412)916433, alsen13@list.ru
         </p>
 
         <div class="highlight">
@@ -109,6 +108,7 @@
     crossorigin="anonymous"></script>
 
   <script src="./js/main.js"></script>
+  
   <script>
     jQuery(function($){$("#phone").mask("+7 (999) 999-9999");$("#phone2").mask("+7 (999) 999-9999");});
     </script>
@@ -122,7 +122,7 @@
     <!-- begin post  -->
         <div class="post">
     <br>
-    <a href="#inline" class="modalbox">Обратная связь</a>
+    <a href="#inline" class="modalbox">Обратный звонок</a>
     <div id="inline">
         <h2>Онлайн заявка</h2>
       <form id="contact" name="contact" action="#" method="post">
@@ -184,7 +184,7 @@
         $("#send").replaceWith("<em>отправка...</em>");
         $.ajax({
       type:'POST',
-      url:'./popup-form/sendmessage.php',
+      url:'sendmessage.php',
       data:$("#contact").serialize(),
       success:function(data){
       if(data=="true"){
@@ -199,6 +199,10 @@
         });
     });
     </script>
+    
+ 
+		
+	</div>
 </body>
 
 </html>
