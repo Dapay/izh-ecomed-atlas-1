@@ -14,13 +14,13 @@
     <link rel="stylesheet" href="../../../css/style.css">
     <link rel="stylesheet" href="css/leaflet.css">
     <link rel="stylesheet" href="css/qgis2web.css"><link rel="stylesheet" href="css/fontawesome-all.min.css">
-    <!--
+    
     <style>
     #map {
-        width: auto;
-        height: 800px;
+        max-width: 600px;
+        height: 600px;
     }
-    </style>-->
+    </style>
 
 </head>
 
@@ -29,8 +29,8 @@
   <header class="navbar navbar-expand-md navbar-dark bd-navbar sticky-top">
     <nav class="container-xxl flex-wrap flex-md-nowrap" aria-label="Main navigarion">
 
-      <a class="navbar-brand p-0 me-2" href="../../../index.html" aria-label="Медико-экологический атлас Ижевска">
-        <img src="../../../img/izhevsk-logo.png" alt="Медико-экологический атлас Ижевска" width="40" height="32">
+      <a class="navbar-brand p-0 me-2" href="../../../index.html" aria-label="Комфортная среда">
+        <img src="../../../img/izhevsk-logo.png" alt="Комфортная среда" width="40" height="32">
       </a>
 
       <button class="btn bd-sidebar-toggle d-md-none py-0 px-1 ms-3 collapsed" type="button" data-bs-toggle="collapse"
@@ -580,11 +580,10 @@
     </aside>
     <main class="bs-main order-1">
     
-        <div class="row">
+      <div class="container px-4 px-md-3" id="content">
 
-            <div class="col-6" id="map">
-            </div>
-            <div class="col-6">
+        <div class="bd-content" id="map"></div>
+          <div class="bd-content">
               <p>
                 Уральский Федеральный округ характеризуется значительным сосредоточением крупных промышленных предприятий разной направленности, что обусловливает в многолетнем плане высокий уровень загрязненности воды большинства рек этого региона.
 Оценивается степень загрязнённости воды одновременно по широкому перечню показателей качества воды, классифицировать воду по степени загрязнённости позволяет метод комплексной оценки с расчётом удельного комбинаторного индекса загрязнённости воды (далее - УКИЗВ).
