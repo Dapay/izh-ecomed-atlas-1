@@ -14,13 +14,13 @@
     <link rel="stylesheet" href="../../../../css/style.css">
     <link rel="stylesheet" href="css/leaflet.css">
     <link rel="stylesheet" href="css/qgis2web.css"><link rel="stylesheet" href="css/fontawesome-all.min.css">
-    <!--
+    
     <style>
     #map {
-        width: auto;
+        width: 100%;
         height: 800px;
     }
-    </style>-->
+    </style>
 
 </head>
 
@@ -29,8 +29,8 @@
   <header class="navbar navbar-expand-md navbar-dark bd-navbar sticky-top">
     <nav class="container-xxl flex-wrap flex-md-nowrap" aria-label="Main navigarion">
 
-      <a class="navbar-brand p-0 me-2" href="../../../../index.html" aria-label="Медико-экологический атлас Ижевска">
-        <img src="../../../../img/izhevsk-logo.png" alt="Медико-экологический атлас Ижевска" width="40" height="32">
+      <a class="navbar-brand p-0 me-2" href="../../../../index.html" aria-label="Комфортная среда">
+        <img src="../../../../img/izhevsk-logo.png" alt="Комфортная среда" width="40" height="32">
       </a>
 
       <button class="btn bd-sidebar-toggle d-md-none py-0 px-1 ms-3 collapsed" type="button" data-bs-toggle="collapse"
@@ -537,31 +537,31 @@
                     <ul class="list-unstyled fw-normal pb-1 small">
       
                       <li>
-                        <a class="d-inline-flex align-items-center rounded" href="../../../maps/UrFO/atmosf/carbon monoxide/index.html">
+                        <a class="d-inline-flex align-items-center rounded" href="../../../../maps/UrFO/atmosf/carbon monoxide/index.html">
                           Оксод углерода
                         </a>
                       </li>
       
                       <li>
-                        <a class="d-inline-flex align-items-center rounded" href="../../maps/UrFO/atmosf/hydrocarbons/index.html">
+                        <a class="d-inline-flex align-items-center rounded" href="../maps/UrFO/atmosf/hydrocarbons/index.html">
                           Углеводороды
                         </a>
                       </li>
       
                       <li>
-                        <a class="d-inline-flex align-items-center rounded" href="../../../maps/UrFO/atmosf/kiza/index.html">
+                        <a class="d-inline-flex align-items-center rounded" href="../../../../maps/UrFO/atmosf/kiza/index.html">
                           Комплексный индекс загрязнения атмосферы
                         </a>
                       </li>
       
                       <li>
-                        <a class="d-inline-flex align-items-center rounded" href="../../../maps/UrFO/atmosf/nitric oxide/index.html">
+                        <a class="d-inline-flex align-items-center rounded" href="../../../../maps/UrFO/atmosf/nitric oxide/index.html">
                           Оксид азота
                         </a>
                       </li>
 
                       <li>
-                        <a class="d-inline-flex align-items-center rounded" href="../../../maps/UrFO/atmosf/sulfur dioxide/index.html">
+                        <a class="d-inline-flex align-items-center rounded" href="../../../../maps/UrFO/atmosf/sulfur dioxide/index.html">
                           Оксид серы
                         </a>
                       </li>
@@ -580,18 +580,18 @@
     </aside>
     <main class="bs-main order-1">
     
-        <div class="row">
+      <div class="container px-4 px-md-3" id="content">
 
-            <div class="col-6" id="map">
-            </div>
-            <div class="col-6">
+        <div class="bd-content" id="map"></div>
+          <div class="bd-content">
               <p>
-                
+                Наибольшие концентрации наблюдаются в таких городах как Нижний Тагил, Екатеринбург, Каменск-Уральский, Челябинск и на сопредельных территориях. Основными загрязнителями являются предприятия нефтегазодобычи и металлургии: ОАО «ЕВРАЗ Нижнетагильский металлургический комбинат», ОАО «Металлургический завод им. А.К. Серова», ОАО «Сургутнефтегаз», ОАО «НК Роснефть».  
+ В основном на территории УрФО концентрации углеводородов можно характеризовать как низкие. 
+
               </p>
             </div>
-
+        
         </div>
-
     </main>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
@@ -877,7 +877,7 @@
         bounds_group.addLayer(layer__5);
         map.addLayer(layer__5);
         var baseMaps = {};
-        L.control.layers(baseMaps,{'<img src="legend/_5.png" /> Курганская область': layer__5,'<img src="legend/_4.png" /> граница УрФО': layer__4,'<img src="legend/_3.png" /> Свердловская область': layer__3,'<img src="legend/_2.png" /> ХМАО': layer__2,'<img src="legend/_1.png" /> Населенные пункты ': layer__1,'Средние значения концентраций углеводородов, мг/м3<br /><table><tr><td style="text-align: center;"><img src="legend/3_0_менее000070.png" /></td><td>менее 0.0007</td></tr><tr><td style="text-align: center;"><img src="legend/3_0_00007000111.png" /></td><td>0.0007 - 0.0011</td></tr><tr><td style="text-align: center;"><img src="legend/3_0_00011000162.png" /></td><td>0.0011 - 0.0016</td></tr><tr><td style="text-align: center;"><img src="legend/3_0_00016000213.png" /></td><td>0.0016 - 0.0021</td></tr><tr><td style="text-align: center;"><img src="legend/3_0_000210иболее4.png" /></td><td>0.00210 и более</td></tr></table>': layer_3_0,},{collapsed:false}).addTo(map);
+        L.control.layers(baseMaps,{'<img src="legend/_1.png" /> Населенные пункты ': layer__1,'Средние значения концентраций углеводородов, мг/м3<br /><table><tr><td style="text-align: center;"><img src="legend/3_0_менее000070.png" /></td><td>менее 0.0007</td></tr><tr><td style="text-align: center;"><img src="legend/3_0_00007000111.png" /></td><td>0.0007 - 0.0011</td></tr><tr><td style="text-align: center;"><img src="legend/3_0_00011000162.png" /></td><td>0.0011 - 0.0016</td></tr><tr><td style="text-align: center;"><img src="legend/3_0_00016000213.png" /></td><td>0.0016 - 0.0021</td></tr><tr><td style="text-align: center;"><img src="legend/3_0_000210иболее4.png" /></td><td>0.00210 и более</td></tr></table>': layer_3_0,},{collapsed:false}).addTo(map);
         setBounds();
         var i = 0;
         layer__1.eachLayer(function(layer) {

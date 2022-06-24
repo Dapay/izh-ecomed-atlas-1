@@ -10,9 +10,15 @@
     integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <link rel="stylesheet" href="../../../../css/bootstrap.css">
     <link rel="stylesheet" href="../../../../css/style.css">
-    <link rel="stylesheet" href="css/leaflet.css">
+    <link rel="stylesheet" href="./resources/ol.css">
+        <link rel="stylesheet" href="resources/fontawesome-all.min.css">
+        <link rel="stylesheet" href="./resources/ol-layerswitcher.css">
+        <link rel="stylesheet" href="./resources/qgis2web.css">
+        <link rel="stylesheet" href="css/leaflet.css">
     <link rel="stylesheet" href="css/qgis2web.css"><link rel="stylesheet" href="css/fontawesome-all.min.css">
-<style>
+        
+    
+<!--<style>
 .search-layer {
   top: 65px;
   left: .5em;
@@ -43,9 +49,9 @@
             background: rgba(255, 255, 255, 0.5) !important;
             color: black !important;
         }
-        </style>
+        </style>-->
         <style>
-        html, body, #map {
+        #map {
             width: 100%;
             height: 100%;
             padding: 0;
@@ -58,8 +64,8 @@
         <header class="navbar navbar-expand-md navbar-dark bd-navbar sticky-top">
             <nav class="container-xxl flex-wrap flex-md-nowrap" aria-label="Main navigarion">
         
-              <a class="navbar-brand p-0 me-2" href="../../../../index.html" aria-label="Медико-экологический атлас Ижевска">
-                <img src="../../../../img/izhevsk-logo.png" alt="Медико-экологический атлас Ижевска" width="40" height="32">
+              <a class="navbar-brand p-0 me-2" href="../../../../index.html" aria-label="Комфортная среда">
+                <img src="../../../../img/izhevsk-logo.png" alt="Комфортная среда" width="40" height="32">
               </a>
         
               <button class="btn bd-sidebar-toggle d-md-none py-0 px-1 ms-3 collapsed" type="button" data-bs-toggle="collapse"
@@ -572,25 +578,25 @@
                               </li>
               
                               <li>
-                                <a class="d-inline-flex align-items-center rounded" href="../../../maps/UrFO/atmosf/hydrocarbons/index.html">
+                                <a class="d-inline-flex align-items-center rounded" href="../../../../maps/UrFO/atmosf/hydrocarbons/index.html">
                                   Углеводороды
                                 </a>
                               </li>
               
                               <li>
-                                <a class="d-inline-flex align-items-center rounded" href="../../../maps/UrFO/atmosf/kiza/index.html">
+                                <a class="d-inline-flex align-items-center rounded" href="../../../../maps/UrFO/atmosf/kiza/index.html">
                                   Комплексный индекс загрязнения атмосферы
                                 </a>
                               </li>
               
                               <li>
-                                <a class="d-inline-flex align-items-center rounded" href="../../../maps/UrFO/atmosf/nitric oxide/index.html">
+                                <a class="d-inline-flex align-items-center rounded" href="../../../../maps/UrFO/atmosf/nitric oxide/index.html">
                                   Оксид азота
                                 </a>
                               </li>
         
                               <li>
-                                <a class="d-inline-flex align-items-center rounded" href="../../../maps/UrFO/atmosf/sulfur dioxide/index.html">
+                                <a class="d-inline-flex align-items-center rounded" href="../../../../maps/UrFO/atmosf/sulfur dioxide/index.html">
                                   Оксид серы
                                 </a>
                               </li>
@@ -609,16 +615,17 @@
             </aside>
             <main class="bs-main order-1">
             
-                <div class="row">
-        
-                    <div class="col-6" id="map">
-                    </div>
-                    <div class="col-6">
+              <div class="container px-4 px-md-3" id="content">
+
+                <div class="bd-content" id="map"></div>
+                  <div class="bd-content">
                       <p>
-                                
+                        Наибольшие концентрации оксида углерода приурочены к юго-западной части округа, максимальные же наблюдаются вблизи городов Нижний Тагил и Каменск-Уральский. Также высокие концентрации на территориях таких городов как Челябинск, Магнитогорск, Нижневартовск. Основные предприятия загрязнители на данной территории являются: ОАО «ЕВРАЗ Нижнетагильский металлургический комбинат», ОАО «Металлургический завод им. А.К. Серова», ПАО «Магнитогорский металлургический комбинат», ПАО «Челябинский металлургический комбинат», ОАО «Мечел-Кокс», АО «Карабашмедь».
+На северной и центральной части округа в основном невысокие концентрации, что обусловлено низкой промышленной и транспортной развитостью регионов. В центральной части средние концентрации оксида углерода наблюдается вблизи таких городов как Ханты-Мансийск, Сургут, Нефтеюганск, Ноябрьск. Предприятия загрязнители – это нефтедобывающие предприятия: ОАО «Сургутнефтегаз», ОАО «НК Роснефть».  
+        
                       </p>
                     </div>
-        
+                
                 </div>
         
             </main>
