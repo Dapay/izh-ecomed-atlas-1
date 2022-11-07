@@ -31,6 +31,44 @@
   position: relative;
   vertical-align: top;
 }
+.carousel slide
+{
+  height: 100%;
+  position: relative;
+  
+}
+.carousel-caption
+{
+  z-index: 20;
+  width: auto;
+  max-height: fit-content;
+  top: 0%;
+  
 
+  
+}
 
-      
+.row
+{
+  position: absolute;
+  bottom: 50%;
+  z-index: 20;
+
+}
+ .col
+ {
+  background-color:rgba(205, 214, 219, 0);
+ }
+ .card
+ {
+  background-color:rgba(205, 214, 219, 0);
+ }
+.card-body
+{
+  background-color:rgba(205, 214, 219, 0.5);
+}
+.btn-primary1
+{
+  background-color:rgba(205, 214, 219, 1);
+}
+    
