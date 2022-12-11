@@ -1,5 +1,7 @@
 .bd-navbar {
-  background-color: #163a25;}
+  background-color: #163a25;
+font-size: 1.5rem;
+}
 
 .btn {
   text-align: start;
@@ -25,6 +27,16 @@
   max-height: fit-content;
   top: 0%;
     
+}
+
+.breadcrumb{
+  margin: 0;
+  height: 20px;
+  font-size: 0.8rem;
+}
+.navbar {
+flex-direction: column;
+align-items: flex-start;
 }
 
 
