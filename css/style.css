@@ -66,6 +66,7 @@ align-items: flex-start;
 {
   background-color:rgba(205, 214, 219, 1);
 }
+
     @media (min-width: 768px){
       .container marketi{top: 20px;}
     }
